@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
 </head>
+
 <body>
-    <div class="cities">
-    <select>
+    <div>
+    <select id="cities">
+        <option value="">Select a city</option>
         <option value="paris">Paris</option>
         <option value="madrid">Madrid</option>
         <option value="berlin">Berlín</option>
     </select>
     </div>
-
+<script src="src/index.js"></script>
 </body>
 </html>
