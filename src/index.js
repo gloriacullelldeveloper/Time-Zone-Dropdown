@@ -19,6 +19,3 @@
     }
   });
 
-/*  let parisDate = moment()
-          .tz("Europe/Paris")
-          .format("dddd, MMMM D, YYYY LT"); */
