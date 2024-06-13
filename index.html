@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <title>Cities</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
 </head>
+<style>
+
+    #cities{
+  
+   text-align: left;
+   font-size: 25px;
+   font-family:Arial, Helvetica, sans-serif;
+}
+
+</style>
 
 <body>
     <div>
@@ -18,6 +27,29 @@
         <option value="berlin">🍻Berlín</option>
     </select>
     </div>
-<script src="src/index.js"></script>
+
+<script>
+     let cities = document.querySelector("#cities");
+        cities.addEventListener('change', function () {
+
+            let citySelected = cities.value;
+            let parisDate = moment().tz("Europe/Paris").format("dddd, MMMM D, YYYY LT");
+            let madridDate = moment().tz("Europe/Madrid").format("dddd, MMMM D, YYYY LT")
+            let berlinDate = moment().tz("Europe/Berlin").format("dddd, MMMM D, YYYY LT")
+
+            switch (citySelected) {
+                case 'paris':
+                    alert(`It is currently ${parisDate} in Europe/Paris`);
+                    break;
+                case 'madrid':
+                    alert(`It is currently ${madridDate} in Europe/Madrid`);
+                    break;
+                case 'berlin':
+                    alert(`It is currently ${berlinDate} in Europe/Berlin`);
+                    break;
+            }
+        });
+</script>
+
 </body>
 </html>
